@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
   <script src="books.js"></script>
   <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <link href="books.css" type="text/css" />
   <title>Angular Bookshelf</title>
 </head>
-<body>
+<body ng-app>
   Hello World!
+
+  BOOK FORM
+  <div ng-controller="BookCtrl">
+	  <form ng-submit="addBook()" >
+	  	<input type="text" placeholder="book title" >
+	  	<input type="text" placeholder="author">
+	  	<input type="text" placeholder="ISBN">
+	  	<input type="text" placeholder="description">
+	  	<button> ADD BOOK </button>
+  	</form>
+	</div>
 </body>
 </html>
